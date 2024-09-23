@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.U.D.O.B.H.C.C</title>
+    <link rel="stylesheet" href="./marise-machine.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="./marise-machine.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo" onclick="trocar_funcao('converter')">
+          <img src="./logo.png" />
+          <h1 title="Super Ultra Decimal Octal Binary Hexadecimal Converter da ciência">
+            S.U.D.O.B.H.C.C
+          </h1>
+        </div>
+
+        <div
+          id="opcao_1"
+          class="opcao funcao_atual"
+          onclick="trocar_funcao('converter')"
+        >
+          <span id="opcao_converter">Converter</span>
+        </div>
+
+        <div id="opcao_2" class="opcao" onclick="trocar_funcao('adicao')">
+          <span id="opcao_adição">Adição</span>
+        </div>
+
+        <div id="opcao_3" class="opcao" onclick="trocar_funcao('subtracao')">
+          <span id="opcao_subtracao">Subtração</span>
+        </div>
+
+        <div
+          id="opcao_4"
+          class="opcao"
+          onclick="trocar_funcao('multiplicacao')"
+        >
+          <span id="opcao_multiplicacao">Multiplicação</span>
+        </div>
+
+        <div id="opcao_5" class="opcao" onclick="trocar_funcao('divisao')">
+          <span id="opcao_divisao">Divisão</span>
+        </div>
+      </div>
+      <div id="conversor" class="conversor">
+        <div class="numero">
+          <h2 id="titulo">Converter</h2>
+          <select id="base">
+            <option value="10">Decimal</option>
+            <option value="2">Binário</option>
+            <option value="8">Octal</option>
+            <option value="16">Hexadecimal</option>
+          </select>
+          <input id="demo1" type="text" placeholder="Número" />
+
+          <div id="cortina" class="sumir">
+            <select id="base2">
+              <option value="10">Decimal</option>
+              <option value="2">Binário</option>
+              <option value="8">Octal</option>
+              <option value="16">Hexadecimal</option>
+            </select>
+            <input id="primeiro_numero" type="text" placeholder="Número" />
+          </div>
+
+          <div id="cortina2" class="sumir">
+            <select id="base3">
+              <option value="10">Decimal</option>
+              <option value="2">Binário</option>
+              <option value="8">Octal</option>
+              <option value="16">Hexadecimal</option>
+            </select>
+            <input id="segundo_numero" type="text" placeholder="Número" />
+          </div>
+
+          <button id="botao_converter" onclick="converter()">Converter</button>
+          <button id="botao_somar" class="sumir" onclick="calcular('somar')">
+            Somar
+          </button>
+          <button
+            id="botao_subtrair"
+            class="sumir"
+            onclick="calcular('subtrair')"
+          >
+            Subtrair
+          </button>
+          <button
+            id="botao_multiplicar"
+            class="sumir"
+            onclick="calcular('multiplicar')"
+          >
+            Multiplicar
+          </button>
+          <button
+            id="botao_dividir"
+            class="sumir"
+            onclick="calcular('dividir')"
+          >
+            Dividir
+          </button>
+        </div>
+
+        <div class="resultado">
+          <h2 id="titulo_resultado">Resultado</h2>
+          <div id="decimal_resultado">
+            <span>Decimal:</span>
+            <div class="box_resultado" id="demo2"></div>
+          </div>
+
+          <div id="bin_resultado">
+            <span>Binário:</span>
+            <div class="box_resultado" id="demo3"></div>
+          </div>
+
+          <div id="octal_resultado">
+            <span>Octal:</span>
+            <div class="box_resultado" id="demo4"></div>
+          </div>
+
+          <div id="hexa_resultado">
+            <span>Hexadecimal:</span>
+            <div class="box_resultado" id="demo5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span>© 2024 S.U.D.O.B.H.C.C - Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </body>
+</html>
